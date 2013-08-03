@@ -1,0 +1,78 @@
+2013/08/03 15:02:00 [error] [exception.CException] exception 'CException' with message 'Issue and its behaviors do not have a method or closure named "getTypeOptions".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(225): CComponent->__call('getTypeOptions', Array)
+#1 /var/www/trackstar/protected/views/issue/_form.php(21): CActiveRecord->__call('getTypeOptions', Array)
+#2 /var/www/trackstar/protected/views/issue/_form.php(21): Issue->getTypeOptions()
+#3 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/tracks...')
+#4 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/tracks...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/tracks...', Array, true)
+#6 /var/www/trackstar/protected/views/issue/create.php(18): CController->renderPartial('_form', Array)
+#7 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/tracks...')
+#8 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/tracks...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/tracks...', Array, true)
+#10 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#11 /var/www/trackstar/protected/controllers/IssueController.php(79): CController->render('create', Array)
+#12 /var/www/yii/framework/web/actions/CInlineAction.php(49): IssueController->actionCreate()
+#13 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#22 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/create')
+#23 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#24 /var/www/trackstar/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/create
+HTTP_REFERER=http://localhost/trackstar/index.php?r=site/login
+---
+2013/08/03 15:44:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('list')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('list')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/list')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/list
+---
+2013/08/03 15:44:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /var/www/trackstar/protected/controllers/IssueController.php:12
+Stack trace:
+#0 /var/www/trackstar/protected/controllers/IssueController.php(28): IssueController->loadProject(NULL)
+#1 /var/www/yii/framework/web/filters/CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#10 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/create')
+#11 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /var/www/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/create
+---
+2013/08/03 15:44:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /var/www/trackstar/protected/controllers/IssueController.php:12
+Stack trace:
+#0 /var/www/trackstar/protected/controllers/IssueController.php(28): IssueController->loadProject(NULL)
+#1 /var/www/yii/framework/web/filters/CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#10 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('issue/create')
+#11 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#12 /var/www/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/create
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue
+---
